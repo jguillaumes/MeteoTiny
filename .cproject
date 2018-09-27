@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="io.sloeber.core.toolChain.release.1919888018">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="io.sloeber.core.toolChain.release.1919888018" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="io.sloeber.core.toolChain.release.1919888018" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
+					<folderInfo id="io.sloeber.core.toolChain.release.1919888018.1920080021" name="/" resourcePath="">
+						<toolChain id="io.sloeber.core.toolChain.release.1779709325" name="Arduino Toolchain (Sloeber edition)" superClass="io.sloeber.core.toolChain.release">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.614592637" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
+							<builder buildPath="${workspace_loc:/TestBMP}/Release" id="io.sloeber.sketch.builder.1492825752" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
+							<tool id="io.sloeber.tool.sketch.compiler.cpp.1644864188" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
+								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.437587924" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+								</option>
+								<inputType id="io.sloeber.compiler.cpp.sketch.input.1178272680" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
+							</tool>
+							<tool id="io.sloeber.tool.compiler.c.941625481" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
+								<option id="io.sloeber.compiler.c.sketch.option.incpath.919336920" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+								</option>
+								<inputType id="io.sloeber.compiler.c.sketch.input.1394541374" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
+							</tool>
+							<tool id="io.sloeber.tool.sketch.compiler.s.611116091" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
+								<option id="io.sloeber.compiler.asm.sketch.option.incpath.395250516" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+								</option>
+								<inputType id="io.sloeber.compiler.S.sketch.input.954858832" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
+							</tool>
+							<tool id="io.sloeber.tool.ar.543257615" name="Arduino archiver" superClass="io.sloeber.tool.ar"/>
+							<tool id="io.sloeber.tool.combine.1877035035" name="Arduino combiner" superClass="io.sloeber.tool.combine"/>
+							<tool id="io.sloeber.tool.objcopy.eep.1603706058" name="Arduino tool objcopy command" superClass="io.sloeber.tool.objcopy.eep"/>
+							<tool id="io.sloeber.tool.size.1533473095" name="Arduino tool Print Size" superClass="io.sloeber.tool.size"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="libraries/TinyBMP280/Release|libraries/TinyBMP280/libraries|libraries/TinyBMP280/core|libraries/TinyBMP280/.settings|libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="TestBMP.null.1768707151" name="TestBMP"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+</cproject>

@@ -1,0 +1,4 @@
+Release
+*.o
+*~
+.DS_Store
