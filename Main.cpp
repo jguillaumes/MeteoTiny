@@ -2,19 +2,36 @@
 #include <TinyBMP280.h>
 #include <SoftwareSerial.h>
 #include <dht.h>
-#include <Time.h>
 
 //+
-// Test sketch for the TinyBMP280 library.
-// For use with an Attiny85:
-// - Connect BMP280 SCL to pin 7
-// - Connect BMP280 SDA to pin 8
-// - Connect BMP280 SDO to ground
-// - Connect a serial terminal using:
-//   - TX to Pin 2 (corresponds to Arduino pin 3)
-//   - RX to pin 3 (corresponds to Arduino pin 4)
-// - Setup your terminal or serial monitor to 2400 bauds
-// - Enjoy!
+// Meteorological sensors - ATTiny85 version
+// Uses a BMP280 to measure temperature and pressure and a DHT22 for humidity
+// Connections:
+// - BMP280:
+//   - Connect the SCL and SDA to the pins 7 and 5 of the Attiny (Arduino equivalent
+//     pins are 2 and 0)
+//   - Connect the SDO pin to ground (I use a 10K resistor)
+// - DHT22:
+//   - Connect the signal leg to the pin 7 of the Attiny (Arduino equivalent is 1)
+// - HC06:
+//   - Connect TX to pin 2 (Arduino equivalent is pin 3)
+//   - Connect RX to pin 3 (Arduino equivalent is pin 4)
+// Setup VCC (3.3V) and GND, and you are set to go
+//
+// The sketch will begin to transmit data as soon as the BT device is paired. The
+// data is sent as integers (divide temperature and pressure by 100 to get
+// centigrades and hectopascals, the humidity value is the relative %).
+//
+// This sketch does not do any timekeeping. Instead of the ":C" field with a timestamp it
+// sends a ":M" field with the milliseconds since the MCU was booted. The client has to
+// convert these readings to real times.
+//
+// It requires the following libraries:
+// - DHTlib (to drive the DHT22)
+// - SoftwareSerial (to talk to the HC-06)
+// - TinyBMP280 (to talk to the BMP280) (https://github.com/jguillaumes/TinyBMP280)
+// - TinyWireM (required by TinyBMP280)
+//-
 
 #define DHT_PIN 1
 #define DELAY_TIME 5000
@@ -55,7 +72,8 @@ void setup() {
 
 void loop() {
 	char buff[80];
-	time_t now;
+
+	long now;
 
 	now = millis();
 	uint32_t t = bmp.readIntTemperature();
