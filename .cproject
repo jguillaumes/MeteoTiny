@@ -19,55 +19,34 @@
 							<builder buildPath="${workspace_loc:/TestBMP}/Release" id="io.sloeber.sketch.builder.1492825752" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
 							<tool id="io.sloeber.tool.sketch.compiler.cpp.1644864188" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
 								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.437587924" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.1178272680" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.compiler.c.941625481" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
 								<option id="io.sloeber.compiler.c.sketch.option.incpath.919336920" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.1394541374" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
 							<tool id="io.sloeber.tool.sketch.compiler.s.611116091" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
 								<option id="io.sloeber.compiler.asm.sketch.option.incpath.395250516" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/core/variant}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyBMP280}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TestBMP/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/DHTlib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/SoftwareSerial/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyWireM}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/Time}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MeteoTiny/libraries/TinyBMP280}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.954858832" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>

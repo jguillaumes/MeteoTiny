@@ -1,16 +1,21 @@
 #include <Arduino.h>
+
 #include <TinyBMP280.h>
+
 #include <SoftwareSerial.h>
 #include <dht.h>
 
 //+
 // Meteorological sensors - ATTiny85 version
-// Uses a BMP280 to measure temperature and pressure and a DHT22 for humidity
+// Uses a BMP280 or BMP180 to measure temperature and pressure and a DHT22 for humidity
 // Connections:
 // - BMP280:
 //   - Connect the SCL and SDA to the pins 7 and 5 of the Attiny (Arduino equivalent
 //     pins are 2 and 0)
 //   - Connect the SDO pin to ground (I use a 10K resistor)
+// - BMP180:
+//   - Connect the SCL and SDA to the pins 7 and 5 of the Attiny (Arduino equivalent
+//     pins are 2 and 0)
 // - DHT22:
 //   - Connect the signal leg to the pin 7 of the Attiny (Arduino equivalent is 1)
 // - HC06:
@@ -39,9 +44,12 @@
 #define HW_VERSION "T1.00.00"
 
 SoftwareSerial mySerial(3, 4);
-tbmp280::TinyBMP280 bmp;
+tbmp::TinyBMP180 bmp;			// Select TinyBMP280 or TinyBMP180
 char isHigro = 'H';
 
+//+
+// Read hygrometer (DHT22) measurement
+//-
 int32_t readHumidity() {
 	dht hig;
 
@@ -59,7 +67,9 @@ int32_t readHumidity() {
 	return h;
 }
 
-
+//+
+// Sketch preparation
+//-
 void setup() {
 	mySerial.begin(9600);
 	bmp.begin();
@@ -70,17 +80,25 @@ void setup() {
 	mySerial.print(":H"); mySerial.println(HW_VERSION);
 }
 
+//+
+// Main loop
+// This sketch is quite dumb. It just loops reading the sensor data
+// and sends them in a formatted line.
+// There is no real time clock, so we send just a milliseconds delta
+// since the MCU was booted.
+//-
 void loop() {
 	char buff[80];
 
 	long now;
 
 	now = millis();
-	uint32_t t = bmp.readIntTemperature();
+
+	int32_t t = bmp.readIntTemperature();
 	uint32_t p = bmp.readIntPressure();
 	int32_t h = readHumidity();
 
-	sprintf(buff, "DATA :M%09lu:T%04lu:P%06lu:H%05ld:F%s:W%s:D-T%cP-" ,
+	sprintf(buff, "DATA :M%09lu:T%05ld:P%06lu:H%05ld:F%s:W%s:D-T%cP-" ,
 				now, t, p, h,  FW_VERSION, HW_VERSION, isHigro);
 	mySerial.println(buff);
 	delay(DELAY_TIME);
